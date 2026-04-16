@@ -1,4 +1,4 @@
-print('J-Z09《机智呆猫君》')
+print('J-Z09《招财呆猫》')
 print('Distance: B, Motor Head: D, Motor Hand: F')
 
 from time import sleep
@@ -19,7 +19,7 @@ while True:
     n = ds.read()
     print(n)
 
-    if n < 100:
+    if n < 300:
         print('近')
         m_head.to_angle(0, 100, 2, False)
         r2.play_audio(12) # 小猫叫
@@ -31,7 +31,7 @@ while True:
     else:
         print('远')
         sleep(0.01)
-        m_head.to_angle(30, 100, 2, False)
+        m_head.to_angle(20, 100, 2, False)
         sleep(0.01)
-        m_head.to_angle(330, 100, 2, False)
+        m_head.to_angle(340, 100, 2, False)
         sleep(0.01)

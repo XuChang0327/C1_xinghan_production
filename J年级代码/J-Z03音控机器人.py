@@ -14,7 +14,8 @@ ss = SoundSensor('B')
 
 while True:
     n1 = ss.read()
-    n2 = round(n1 / 4095 * 100 ) # 声音传感器数据映射到0-100
+    # 映射到 0-70：满量程若用 100 易因速度过大导致机器人跌倒
+    n2 = round(n1 / 4095 * 70)
     print(f"sound:{n1} | motor:{n2}")
     m1.start(1, n2)
     sleep(0.1)

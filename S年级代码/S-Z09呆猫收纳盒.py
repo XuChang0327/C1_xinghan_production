@@ -21,8 +21,9 @@ r2.matrix_show_light_effect(7, True, 255)
 while True:
     n = ds.read()
     print(n)
-    if n < 20:
+    if n < 50:
         m1.to_angle(90, 100, 2, False)
+        r2.play_audio(10)
         sleep(3)
     else:
         m1.to_angle(0, 100, 2, False)
